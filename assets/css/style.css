@@ -292,14 +292,15 @@ img {
   text-transform: uppercase;
 }
 
+/*grid Container*/
 .home__info {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  grid-template-areas: "a";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-gap: 1rem;
   background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .5) ), url("/assets/img/lmdlbg.png");
   position: relative;
+  align-content: center;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -318,10 +319,10 @@ img {
   color: #FFFFFF;
   background-color: #1111bd;
   position: relative;
-  top: 20px;
+  /*top: 20px;
   left: 450px;
   right: 400px;
-  bottom: 0px;
+  bottom: 0px;*/
 }
 
 .btn--workbok {
@@ -333,10 +334,6 @@ img {
   color: #FFFFFF;
   background-color: #8911bd;
   position: relative;
-  top: 20px;
-  left: 450px;
-  right: 400px;
-  bottom: 0px;
 }
 
 /* ==========About========*/
@@ -419,7 +416,6 @@ img {
 .projects__image {
   display: flex;
   border-radius: 5px;
-  display: flex;
   width: 100%;
   height: 80vh;
   overflow-x: scroll;
@@ -430,10 +426,10 @@ img {
   flex: 0 0 100%;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 5px;
+  object-fit: contain;
+  border-radius:0px;
   box-shadow: 6px 11px 13px 0 #5221E6;
-  background-color: #ffffff;
+  background-color: #000000;
   scroll-snap-align: center;
 }
 
@@ -574,20 +570,13 @@ textarea {
   }
   .home__info {
     padding: 70px 3% 30px;
-    }
+      
+  }
   .btn--primary {
   position: relative;
-  top: 20px;
-  left: 80px;
-  right: 100px;
-  bottom: 40px;
   }
   .btn--workbok {
   position: relative;
-  top: 20px;
-  left: 80px;
-  right: 100px;
-  bottom: 40px;
   } 
 }
 

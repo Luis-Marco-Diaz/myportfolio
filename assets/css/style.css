@@ -91,6 +91,9 @@ ul {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: #ffffff;
+}
 
 img {
   max-width: 100%;
@@ -234,33 +237,25 @@ img {
 }
 
 .home__container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 600px;
   row-gap: 2rem;
   padding: var(--header-height) 0 3rem;
   clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px))
 }
 
-.background__video {
-  position: absolute;
-  height: auto;
-  margin: 0;
-}
-
 .home__image .Luis {
   width: clamp(min(320px, 100%), 85vh, 550px);
-  position: absolute;
+  align-items: center;
   height: auto;
-  margin: 0;
+  justify-content: center;
   z-index: 1;
 }
 
-.home__image .Svg {
-  width: clamp(min(320px, 100%), 100vh, 450px);
-  height: auto;
-  position: relative;
-  margin: 0px 0px 0px 430px;
-  z-index: 0;
-}
 
 .home__social{
   position: absolute;
@@ -305,7 +300,7 @@ img {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 450px;
+  
   clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
   padding: 40px 3% 40px;
 }
@@ -381,7 +376,9 @@ img {
 
 .bxl-html5, .bxl-css3, .bxl-javascript, .bxl-adobe,
 .bxl-adobe, .bx-layout, .bx-package, .bx-book-reader, 
-.bx-shopping-bag, .bxs-server, .bxl-shopify, .bxl-google {
+.bx-shopping-bag, .bxs-server, .bxl-shopify, .bxl-google,
+.bxl-react, .bxl-postgresql, .bxl-nodejs, .bxl-trello,
+.bx-target-lock, .bxs-chess {
  color: #000000;
 }
 
@@ -402,6 +399,11 @@ img {
 }
 
 /*========== Projects ======*/
+.lottiebox {
+  display: flex;
+  flex-direction: column;
+  border: 0px;
+}
 .projects__container {
   gap: 2rem;
   background-image: url("/PROYECTO PORTAFOLIO/LUIS MARCO DÍAZ /assets/img/Ellipse.svg");
@@ -419,6 +421,7 @@ img {
   width: 100%;
   height: 80vh;
   overflow-x: scroll;
+  
   scroll-snap-type: x mandatory;
 }
 
@@ -441,6 +444,10 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  background-color: #5221E6;
+  width: fit-content;
+  border-radius: 5%;
+  color: white;
 }
 
 .projects__button {
@@ -562,6 +569,7 @@ textarea {
   .navbar__menu:target{
     box-shadow: 10px 10px 5px rgba(37, 31, 107, 0.7);;
   }
+  
   .home__image .Svg {
     position: relative;
     margin: 0px 0px 0px 0px;
@@ -598,7 +606,6 @@ textarea {
   .navbar__item {
     margin: 0;
   }
-
   .home__social {
     position: relative;
     top: 0;
